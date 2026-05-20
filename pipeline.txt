@@ -17,7 +17,7 @@ pipeline {
                       -Dsonar.projectKey=my-project \
                       -Dsonar.projectName='my-project' \
                       -Dsonar.host.url=http://13.201.78.172:9000 \
-                      -Dsonar.token=sqp_ee60021af5d22fae5051fcdb03d68ecbcad49aca'''
+                      -Dsonar.token=sqp_dbca1caebe30971c2937ff5e85d61e5db4528a9e'''
             }
         }
         stage ("Deploy") {
