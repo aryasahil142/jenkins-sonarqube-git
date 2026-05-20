@@ -16,7 +16,7 @@ pipeline {
                 sh '''/opt/maven/bin/mvn clean verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar \
                       -Dsonar.projectKey=my-project \
                       -Dsonar.projectName='my-project' \
-                      -Dsonar.host.url=http://3.111.34.6:9000 \
+                      -Dsonar.host.url=http://13.201.78.172:9000 \
                       -Dsonar.token=sqp_ee60021af5d22fae5051fcdb03d68ecbcad49aca'''
             }
         }
