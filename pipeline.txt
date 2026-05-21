@@ -13,11 +13,10 @@ pipeline {
         }
         stage ("Test") {
             steps {
-                sh '''/opt/maven/bin/mvn clean verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar \
+              withSonarQubeEnv(credentialsId: 'my-sonar-token'; installationNmae: 'my-sonar') {
+   /opt/maven/bin/mvn clean verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar \
                       -Dsonar.projectKey=java-student \
-                      -Dsonar.projectName='java-student' \
-                      -Dsonar.host.url=http://13.127.80.17:9000 \
-                      -Dsonar.token=sqp_dbca1caebe30971c2937ff5e85d61e5db4528a9e'''
+}
             }
         }
         stage ("Deploy") {
