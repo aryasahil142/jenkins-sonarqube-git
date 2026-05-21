@@ -13,7 +13,7 @@ pipeline {
         }
         stage ("Test") {
             steps {
-              withSonarQubeEnv(credentialsId: 'my-sonar-token'; installationNmae: 'my-sonar') {
+              withSonarQubeEnv(credentialsId: 'my-sonar-token'; installationName: 'my-sonar') {
    /opt/maven/bin/mvn clean verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar \
                       -Dsonar.projectKey=java-student \
 }
